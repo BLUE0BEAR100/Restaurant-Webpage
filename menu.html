@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu Slider</title>
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+<section class="sub-header">
+       <nav>
+        <a href="school_webpage.html"><img src="images/logo.png.png"></a>
+        <div class="nav-links">
+            <ul>
+               <li><a href="NavigationBar.html">HOME</a></li>
+                 <li><a href="about.html">ABOUT</a></li>
+                 <li><a href="">MENU</a></li>
+                 <li><a href="">SOCIAL MEDIA</a></li>
+                 <li><a href="">CART</a></li>
+            </ul>
+        </div>
+       </nav>
+
+    <h1>Our Special Menu</h1>
+    <div class="carousel-container">
+        <div class="carousel-slide myslides">
+            <img src="images/bread.png" alt="Bread">
+            <h2>Bread</h2>
+            <p>Freshly baked, soft and warm.</p>
+        </div>
+        <div class="carousel-slide myslides">
+            <img src="images/cake.png" alt="Cake">
+            <h2>Cake</h2>
+            <p>Delicious, creamy, and irresistible.</p>
+        </div>
+        <div class="carousel-slide myslides">
+            <img src="images/coffe.png" alt="Coffee">
+            <h2>Coffee</h2>
+            <p>Rich, aromatic, and freshly brewed.</p>
+        </div>
+    </div>
+    <script>
+        var index = 0;
+        function carousel() {
+            var slides = document.getElementsByClassName("myslides");
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            index++;
+            if (index > slides.length) {
+                index = 1;
+            }
+            slides[index - 1].style.display = "block";
+            setTimeout(carousel, 2000);
+        }
+        carousel();
+    </script>
+</body>
+</html>
